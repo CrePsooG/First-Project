@@ -1,0 +1,132 @@
+:root {
+  --page-1-color: url(https://source.unsplash.com/WLUHO9A_xik/1600x900) no-repeat center center/cover ;
+  --page-2-color: url(https://source.unsplash.com/mpWPcRT9D1E/1600x900) no-repeat center center/cover;
+  --page-3-color: url(https://source.unsplash.com/U-Kty6HxcQc/1600x900) no-repeat center center/cover;
+  --page-4-color: url(https://source.unsplash.com/PL01SXCojmM/1600x900) no-repeat center center/cover;
+  --page-5-background: url(https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1024) no-repeat center center/cover;
+  --page-6-background: url(https://source.unsplash.com/yeq7XzeJaiM/1600x900) no-repeat center center/cover;
+  --animate-speed: 1s;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Page Colors */
+#page-1 { background: var(--page-1-color); } 
+#page-1 h1 { color: #333; }
+
+#page-2 { background: var(--page-2-color); }
+#page-3 { background: var(--page-3-color); }
+#page-4 { background: var(--page-4-color); }
+#page-5 { background: var(--page-5-background); }
+#page-6 { background: var(--page-6-background); }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+.page p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.btn:hover,
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #fff;
+  color: #333;
+}
+
+.btnrickroll {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    height:70px;
+    width:100px;
+    cursor: pointer;
+    top: 418%;
+    left: 58%;
+    position: absolute;
+}
+
+.btnback {
+  background: transparent;
+  border: none;
+  outline: none;
+  display: block;
+  height:250px;
+  width:250px;
+  cursor: pointer;
+  top: 467%;
+  left: 70%;
+  position: absolute;
+}
+
+
+/* Page Animation */
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animate-speed) forwards ease-in;
+
+}
+
+#page-1 p {
+  transform: translateX(-2400px);
+  animation: text var(--animate-speed) forwards ease-in 2s;
+
+}
+
+/* Keyframes */
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes text {
+  to {
+    transform: translateX(0);
+  }
+}
